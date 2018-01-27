@@ -3,7 +3,7 @@ CInterpreter
 CInterpreter is a very small C interpreter written in Python from scratch. Project was written as a part of course
 Compiler Construction at [The Faculty Of Computer Science](https://raf.edu.rs/).
 
-Interpreter was designed and written by Sladjan Kantar and i'm upgrading to simulate address memory, without using additional libraries. You can easily rewrite this to any
+Interpreter was designed and written by me, without using additional libraries. You can easily rewrite this to any
 other language. With this interpreter you can execute codes like following:
 
 * [example1](example1.c)

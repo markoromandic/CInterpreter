@@ -142,10 +142,6 @@ class Lexer(object):
 
         return token
 
-    # RESI
-    def decrease_token_to_id(self, token):
-        while token is not ID:
-            self.get_next_token
     @property
     def get_next_token(self):
         """ Lexical analyzer (also known as scanner or tokenizer)

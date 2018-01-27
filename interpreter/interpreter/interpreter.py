@@ -160,9 +160,6 @@ class Interpreter(NodeVisitor):
         return self.memory[node.value]
 
     def visit_Assign(self, node):
-        # var_name = node.left.value
-        # var_num_pointers = node.left.num_dereferences
-        # print('POINTERS ASSIGN', var_num_pointers, var_name)
         if node.op.type == ADD_ASSIGN:
             self.memory[node.left] += self.visit(node.right)
         elif node.op.type == SUB_ASSIGN:
@@ -243,8 +240,6 @@ class Interpreter(NodeVisitor):
 
     def visit_CaseStmt(self, node):
         return node.variable
-
-
 
     def visit_ForStmt(self, node):
         self.visit(node.setup)

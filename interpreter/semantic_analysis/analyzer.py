@@ -265,13 +265,9 @@ class SemanticAnalyzer(NodeVisitor):
 
     def visit_SwitchStmt(self, node):
         """ while(condition) body """
-    #    self.visit(node.variable)
-        #self.visit(node.body)
 
     def visit_CaseStmtl(self, node):
         """ while(condition) body """
-      #  self.visit(node.variable)
-        #self.visit(node.body)
 
     def visit_DoWhileStmt(self, node):
         """ do body while (condition) """

@@ -28,12 +28,6 @@ class Type(Node):
         self.value = token.value
 
 
-class Pointer(Type):
-    def __init__(self, token, line, num):
-        Type.__init__(self, token, line)
-        self.num = num
-
-
 class Var(Node):
     def __init__(self, token, line, num_dereferences):
         Node.__init__(self, line)
@@ -206,9 +200,6 @@ class Program(Node):
 
 class NodeVisitor(object):
     def visit(self, node):
-        # if not isinstance(node, Program) and not isinstance(node, IncludeLibrary):
-        #     method_name = 'visit_' + type(node).__name__
-        # else:
         method_name = 'visit_' + type(node).__name__
         visitor = getattr(self, method_name, self.generic_visit)
         return visitor(node)

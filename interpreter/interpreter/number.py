@@ -74,6 +74,8 @@ class Number(object):
             if Number.types[ttype](value) < 0:
                 self.value = MAX_UNSIGNED_CHAR - (Number.types[ttype](value) % (0 - 1))
             self.value = value
+        else:
+            self.value = value
 
     def _get_res_type(self, other):
         left_order = Number.order.index(self.type)
@@ -84,7 +86,6 @@ class Number(object):
     def __add__(self, other):
         """ self + other """
         ttype, ctype = self._get_res_type(other)
-
         return Number(ttype, ctype(self.value) + ctype(other.value))
 
     def __sub__(self, other):

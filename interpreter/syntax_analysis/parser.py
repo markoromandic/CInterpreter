@@ -325,7 +325,6 @@ class Parser(object):
                 line=self.lexer.line
             )
 
-
     @restorable
     def check_iteration_statement(self):
         return self.current_token.type in (WHILE, DO, FOR)
@@ -422,7 +421,6 @@ class Parser(object):
         assignment_expression       : assignment_expression (COMMA assignment_expression)*
                                     | conditional_expression
         """
-        hej = 5
         if self.check_assignment_expression():
             node = self.variable()
             while self.current_token.type.endswith('ASSIGN'):
@@ -435,7 +433,6 @@ class Parser(object):
                     line=self.lexer.line
                 )
         return self.conditional_expression()
-
 
     def conditional_expression(self):
         """
@@ -770,7 +767,6 @@ class Parser(object):
             )
 
     def type_spec(self):
-        # OVDE
         """
         type_spec                   : TYPE
         """
@@ -796,14 +792,6 @@ class Parser(object):
                 token.value = 'unsigned_char'
             elif len(array_of_types) == 1:
                 token.type = array_of_types[0]
-            # count = 0
-            #
-            # while self.current_token.type is MUL_OP:
-            #     count += 1
-            #     self.eat(self.current_token.type)
-            #
-            # if count:
-            #     return Pointer(token=token, line=self.lexer.line, num=count)
 
             return Type(
                 token=token,

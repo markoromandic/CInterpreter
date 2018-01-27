@@ -153,12 +153,10 @@ class Scope(object):
         global address, memoryLocation
 
         if isinstance(key, Var):
-            print('POINTERS ASSIGN', key.num_dereferences, key.value)
             key = key.value
         if isinstance(key, VarDecl):
             var_type = key.type_node.value
             var_pointer_num = key.var_node.num_dereferences
-            print('POINTER DECLARATION:', var_pointer_num)
             var_name = key.var_node.value
             var_memoryLocation = findEmptyMemory(getByteType(var_type))
 
@@ -169,7 +167,6 @@ class Scope(object):
             return 0
 
         if isinstance(value, Number) and key in self._values.keys():
-            # memoryLocation = findEmptyMemory(getByteType(value.type))
             newVar = self._values[key]
             number = Number(ttype=newVar.type, value=value.value)
             writeToMemory(location=newVar.memoryLocation, num_byte=getByteType(newVar.type), value=number.value)
@@ -218,7 +215,6 @@ class Scope(object):
         global address
 
         if isinstance(item, Var):
-            print('POINTERS ASSIGN', item.num_dereferences, item.value)
             item = item.value
 
         varCur = self._values[item]
