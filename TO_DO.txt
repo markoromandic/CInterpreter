@@ -1,0 +1,17 @@
+URADITI:
+SAD SMO U MOGUCNOSTI DA IMPLEMENTIRAMO STRING
+RESITI SIMULACIJU POKAZIVACA U MEMORIJI
+simulaciju nizova (jednodimenzionalni, visedimenzionalni) 2 pts
+simulaciju struktura podataka 2 pts
+manipulacije nad stringovima 2 pts
+
+URADJENO:
+simulaciju memorijskih adresa 2 pts
+break, continue, switch-case 2 pts
+dinamicku alokacija memorije 2 pts
+tipovi podataka, long, unsigned long long... 2 pts
+dodavanje ogranicenja na tipove podataka 2 pts
+cesce koriscenje funkcije biblioteka string.h, stdio.h, math.h, stdlib.h, limits.h 2 pts
+simulaciju pokazivaca 2 pts
+
+UKUPNO: 14pts

@@ -1,0 +1,195 @@
+digraph astgraph {
+  node [shape=circle, fontsize=12, fontname="Courier", height=.1];
+  ranksep=.3;
+  edge [arrowsize=.5]
+
+  node1 [label="Program"]
+  node2 [label="Include:stdio"]
+  node1 -> node2
+  node3 [label="FunctionDecl:reverse"]
+  node4 [label="Param"]
+  node5 [label="broj"]
+  node4 -> node5
+  node6 [label="int"]
+  node4 -> node6
+  node3 -> node4
+  node7 [label="FunctionBody"]
+  node8 [label="VarDecl"]
+  node9 [label="zbir"]
+  node8 -> node9
+  node10 [label="int"]
+  node8 -> node10
+  node7 -> node8
+  node11 [label="="]
+  node12 [label="zbir"]
+  node11 -> node12
+  node13 [label="0"]
+  node11 -> node13
+  node7 -> node11
+  node14 [label="WhileStmt"]
+  node15 [label="Expression"]
+  node16 [label=">"]
+  node17 [label="broj"]
+  node18 [label="0"]
+  node16 -> node17
+  node16 -> node18
+  node15 -> node16
+  node14 -> node15
+  node19 [label="CompoundStmt"]
+  node20 [label="Expression"]
+  node21 [label="FunctionCall:printf"]
+  node22 [label="String:%d\n"]
+  node21 -> node22 [label="Arg00"]
+  node23 [label="broj"]
+  node21 -> node23 [label="Arg01"]
+  node20 -> node21
+  node19 -> node20
+  node24 [label="VarDecl"]
+  node25 [label="k"]
+  node24 -> node25
+  node26 [label="int"]
+  node24 -> node26
+  node19 -> node24
+  node27 [label="="]
+  node28 [label="k"]
+  node27 -> node28
+  node29 [label="%"]
+  node30 [label="broj"]
+  node31 [label="10"]
+  node29 -> node30
+  node29 -> node31
+  node27 -> node29
+  node19 -> node27
+  node32 [label="Expression"]
+  node33 [label="FunctionCall:printf"]
+  node34 [label="String: k => %d\n"]
+  node33 -> node34 [label="Arg00"]
+  node35 [label="k"]
+  node33 -> node35 [label="Arg01"]
+  node32 -> node33
+  node19 -> node32
+  node36 [label="Expression"]
+  node37 [label="/="]
+  node38 [label="broj"]
+  node37 -> node38
+  node39 [label="10"]
+  node37 -> node39
+  node36 -> node37
+  node19 -> node36
+  node40 [label="Expression"]
+  node41 [label="="]
+  node42 [label="zbir"]
+  node41 -> node42
+  node43 [label="+"]
+  node44 [label="*"]
+  node45 [label="zbir"]
+  node46 [label="10"]
+  node44 -> node45
+  node44 -> node46
+  node47 [label="k"]
+  node43 -> node44
+  node43 -> node47
+  node41 -> node43
+  node40 -> node41
+  node19 -> node40
+  node14 -> node19
+  node7 -> node14
+  node48 [label="ReturnStmt"]
+  node49 [label="Expression"]
+  node50 [label="zbir"]
+  node49 -> node50
+  node48 -> node49
+  node7 -> node48
+  node3 -> node7
+  node1 -> node3
+  node51 [label="FunctionDecl:pom"]
+  node52 [label="Param"]
+  node53 [label="broj"]
+  node52 -> node53
+  node54 [label="int"]
+  node52 -> node54
+  node51 -> node52
+  node55 [label="FunctionBody"]
+  node56 [label="Expression"]
+  node57 [label="/="]
+  node58 [label="broj"]
+  node57 -> node58
+  node59 [label="10"]
+  node57 -> node59
+  node56 -> node57
+  node55 -> node56
+  node60 [label="Expression"]
+  node61 [label="="]
+  node62 [label="broj"]
+  node61 -> node62
+  node63 [label="FunctionCall:reverse"]
+  node64 [label="broj"]
+  node63 -> node64 [label="Arg00"]
+  node61 -> node63
+  node60 -> node61
+  node55 -> node60
+  node65 [label="Expression"]
+  node66 [label="/="]
+  node67 [label="broj"]
+  node66 -> node67
+  node68 [label="10"]
+  node66 -> node68
+  node65 -> node66
+  node55 -> node65
+  node69 [label="ReturnStmt"]
+  node70 [label="Expression"]
+  node71 [label="FunctionCall:reverse"]
+  node72 [label="broj"]
+  node71 -> node72 [label="Arg00"]
+  node70 -> node71
+  node69 -> node70
+  node55 -> node69
+  node51 -> node55
+  node1 -> node51
+  node73 [label="FunctionDecl:main"]
+  node74 [label="FunctionBody"]
+  node75 [label="VarDecl"]
+  node76 [label="n"]
+  node75 -> node76
+  node77 [label="int"]
+  node75 -> node77
+  node74 -> node75
+  node78 [label="VarDecl"]
+  node79 [label="broj"]
+  node78 -> node79
+  node80 [label="int"]
+  node78 -> node80
+  node74 -> node78
+  node81 [label="="]
+  node82 [label="broj"]
+  node81 -> node82
+  node83 [label="123"]
+  node81 -> node83
+  node74 -> node81
+  node84 [label="Expression"]
+  node85 [label="="]
+  node86 [label="broj"]
+  node85 -> node86
+  node87 [label="FunctionCall:pom"]
+  node88 [label="broj"]
+  node87 -> node88 [label="Arg00"]
+  node85 -> node87
+  node84 -> node85
+  node74 -> node84
+  node89 [label="Expression"]
+  node90 [label="FunctionCall:printf"]
+  node91 [label="String:%d"]
+  node90 -> node91 [label="Arg00"]
+  node92 [label="broj"]
+  node90 -> node92 [label="Arg01"]
+  node89 -> node90
+  node74 -> node89
+  node93 [label="ReturnStmt"]
+  node94 [label="Expression"]
+  node95 [label="0"]
+  node94 -> node95
+  node93 -> node94
+  node74 -> node93
+  node73 -> node74
+  node1 -> node73
+}
