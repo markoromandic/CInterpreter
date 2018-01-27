@@ -5,6 +5,10 @@ Compiler Construction at [The Faculty Of Computer Science](https://raf.edu.rs/).
 
 Interpreter was designed and written by [Slađan Kantar](https://github.com/SKantar), without using additional libraries. You can easily rewrite this to any other language. 
 
+My team:
+* [Vojin Pupavac](vojinpu)
+* [Petja Đaković](petjadakovic)
+
 My team upgraded the interpreter to:
 * Simulate memory addresses
 * Simulate pointers
